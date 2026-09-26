@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+/logs
+
+/deploy
+
+*.txt
+*.npy
+**/lightning_logs
+**/__pycache__/
+*.vsdx
+*.csv
+**/lib
+.vscode
+swanlog
+/data

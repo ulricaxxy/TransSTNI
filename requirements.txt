@@ -1,0 +1,17 @@
+# OAGNN-main Python dependencies
+# Prefer setup_oagnn_env.sh on cluster (conda binaries + pip wheels).
+
+# Core (conda recommended: numpy=1.26 pandas pyyaml scipy)
+numpy<2
+pandas
+scipy
+pyyaml
+
+# Deep learning (pip + PyTorch CUDA wheels)
+torch
+torchvision
+torchaudio
+torch-geometric
+
+# Logging / utilities
+swanlab

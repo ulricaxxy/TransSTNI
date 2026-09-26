@@ -1,0 +1,28 @@
+_target_: src.models.STUNet.pretrainer.Trainer
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0001
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.5
+  patience: 10
+
+model:
+  _target_: src.models.STUNet.core.SpatialAE.SpatialAE
+
+  encoder:
+    d_model: 128
+    pool_fun: 'mean'
+    patch_dim: 8
+    save_path: "path-to-ckpt"
+
+# use_pretrained_weight: False
+
+# compile model for faster training with pytorch 2.0
+compile: false

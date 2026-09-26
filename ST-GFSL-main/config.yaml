@@ -1,0 +1,47 @@
+data:
+  data_keys: ['largest_sd', 'largest_gba', 'largest_gla']
+  largest_sd:
+    dataset_path: data/largest_sd/dataset.npy
+    adjacency_matrix_path: data/largest_sd/matrix.npy
+    time_step: 35040
+    node_num: 716
+    speed_mean: 244.309662
+    speed_std: 184.015427
+
+  largest_gba:
+    dataset_path: data/largest_gba/dataset.npy
+    adjacency_matrix_path: data/largest_gba/matrix.npy
+    time_step: 35040
+    node_num: 2352
+    speed_mean: 239.822617
+    speed_std: 166.670410
+
+  largest_gla:
+    dataset_path: data/largest_gla/dataset.npy
+    adjacency_matrix_path: data/largest_gla/matrix.npy
+    time_step: 35040
+    node_num: 3834
+    speed_mean: 276.824036
+    speed_std: 187.773514
+
+task:
+  his_num: 12
+  pred_num: 12
+  batch_size: 5
+  test_batch_size: 32
+  task_num: 2
+
+model:
+  node_feature_dim: 2
+  edge_feature_dim: 4
+  message_dim: 1
+  hidden_dim: 16
+  output_dim: 1
+  meta_dim: 16
+  update_lr: 0.01
+  meta_lr: 0.01
+  loss_lambda: 1.5
+  update_step: 5
+  update_step_test: 10
+  tp: True
+  sp: True
