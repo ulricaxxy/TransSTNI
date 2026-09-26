@@ -17,3 +17,4 @@
 - 评估：`sbatch --chdir=$PWD --qos=normal run_oastid_nobehav_egbeta_limnbr_eval_ckpt_slurm.sh nobehav sd`
 - 整表：`bash submit_egbeta_limnbr_repro.sh`（可选 `GOLD_ROOT=...` 对照外部金标）
 # TransSTNI
+# TransSTNI
